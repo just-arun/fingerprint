@@ -1,4 +1,5 @@
 import { Register } from "./register";
+import { Login } from "./login";
 import {
 	GetExampleCredentialCreationOptions, ChallengeFromString,
 	StringToUint8Array, StringToArrayBuffer
@@ -6,7 +7,7 @@ import {
 import { Credential, Service, UserType } from "./type";
 
 export {
-	Register,
+	Register, Login,
 	GetExampleCredentialCreationOptions,
 	ChallengeFromString,
 	StringToUint8Array, StringToArrayBuffer,
