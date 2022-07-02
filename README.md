@@ -10,7 +10,7 @@ login with device fingerprint
 
 ## Usage
 
-```sh
+```js
 import { StringToUint8Array, Challenge } from "web-biometric";
 
 const options = {
