@@ -1,2 +1,2 @@
 # fingerprint
-login with fingerprint
+login with device fingerprint
