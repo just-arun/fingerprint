@@ -1,6 +1,6 @@
 {
-  "name": "web-biometric",
-  "version": "1.05.2",
+  "name": "@biometric/fingerprint",
+  "version": "1.05.3",
   "description": "login to you websites using device fingerprint,lock",
   "main": "./lib/index.js",
   "files": [

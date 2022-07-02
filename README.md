@@ -35,7 +35,7 @@ const options = {
 
 		timeout: 60000,
 
-		# these option should be provided from server
+		// these option should be provided from server
 		challenge: Challenge("this-is-challenge-text-and-should-be-long"),
 
 		authenticatorSelection: {
