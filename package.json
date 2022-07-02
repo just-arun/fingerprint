@@ -1,10 +1,13 @@
 {
   "name": "web-biometric",
-  "version": "1.02.0",
+  "version": "1.03.0",
   "description": "login to you websites using device fingerprint,lock",
   "main": "index.js",
   "files": [
-    "lib/**/*"
+    "lib",
+    "lib/type",
+    "lib/register",
+    "lib/util"
   ],
   "scripts": {
     "build": "tsc",
