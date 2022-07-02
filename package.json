@@ -9,12 +9,11 @@
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/just-arun/fingerprint.git"
+    "url": "git+https://github.com/just-arun/fingerprintjs.git"
   },
   "keywords": [
     "device-fingerprint",
@@ -25,9 +24,9 @@
   "author": "just-arun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/just-arun/fingerprint/issues"
+    "url": "https://github.com/just-arun/fingerprintjs/issues"
   },
-  "homepage": "https://github.com/just-arun/fingerprint#readme",
+  "homepage": "https://github.com/just-arun/fingerprintjs#readme",
   "devDependencies": {
     "typescript": "^4.7.4"
   },
