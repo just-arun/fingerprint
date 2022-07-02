@@ -1,6 +1,8 @@
 import { Register } from "./register";
 
-export default {
-	Register, 
+const WebBiometric = {
+	Register,
 }
+
+export default WebBiometric
 
