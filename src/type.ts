@@ -11,5 +11,4 @@ export type Service = {
 
 export type Credential = {
     id: string,
-    
 }
