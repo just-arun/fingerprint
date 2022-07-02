@@ -10,11 +10,11 @@ export const Register = async (options: CredentialCreationOptions) => {
 			let localOptions: CredentialCreationOptions = {
 				...options,
 			}
-			const cred = await window.navigator
+			const credential = await window.navigator
 				.credentials.create(localOptions)
 			// const credentials
 			return {
-				cred,
+				credential,
 				options: localOptions,
 			}
 		}

@@ -1,12 +1,15 @@
 import { Register } from "./register";
-import { GetExampleCredentialCreationOptions, NewChallenge, NewUint8Array } from "./util";
+import {
+	GetExampleCredentialCreationOptions, ChallengeFromString,
+	StringToUint8Array, StringToArrayBuffer
+} from "./util";
 import { Credential, Service, UserType } from "./type";
 
 export {
 	Register,
 	GetExampleCredentialCreationOptions,
-	NewChallenge,
-	NewUint8Array,
+	ChallengeFromString,
+	StringToUint8Array, StringToArrayBuffer,
 	Credential, Service, UserType
 }
 

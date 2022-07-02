@@ -1,36 +1,50 @@
-export const NewChallenge = () => window
-    .crypto
-    .getRandomValues(new Uint8Array(40)).buffer;
+export const ChallengeFromString = (str: string) => window
+	.crypto
+	.getRandomValues(StringToUint8Array(str)).buffer;
 
-export const NewUint8Array = (size?: number) =>
-    new Uint8Array(!!size ? size : 16);
+export const StringToUint8Array = (str?: string) =>
+new TextEncoder().encode(!!str ? str : "user-uuid-with-16-char-length")
 
-export const GetExampleCredentialCreationOptions = () => ({
-    publicKey: {
-        rp: {
-            name: "Web App Name",
-        },
+/**
+ * `GetExampleCredentialCreationOptions` is meant for quick demo and not meant for production please use our other keys to create credentials
+ * @returns {CredentialCreationOptions} example create credential option
+ */
+export const GetExampleCredentialCreationOptions = (): CredentialCreationOptions => ({
+	publicKey: {
+		rp: {
+			name: "Web App Name",
+		},
 
-        user: {
-            id: NewUint8Array(),
-            name: "john.doe@example.com",
-            displayName: "John Doe"
-        },
+		user: {
+			id: StringToUint8Array(),
+			name: "john.doe@example.com",
+			displayName: "John Doe"
+		},
 
-        pubKeyCredParams: [{
-            type: "public-key",
-            alg: -7
-        }],
+		pubKeyCredParams: [{
+			type: "public-key",
+			alg: -7
+		}],
 
-        attestation: "none",
+		attestation: "none",
 
-        timeout: 60000,
+		timeout: 60000,
 
-        challenge: NewChallenge(),
-        authenticatorSelection: {
-            authenticatorAttachment: "platform",
-            userVerification: "required",
-        }
-    },
-
+		challenge: ChallengeFromString("this-is-challenge-text-and-should-be-long"),
+		authenticatorSelection: {
+			authenticatorAttachment: "platform",
+			userVerification: "required",
+		}
+	},
 })
+
+
+export const StringToArrayBuffer = (str: string) => {
+	let buf = new ArrayBuffer(str.length * 2); // 2 bytes for each char
+	let bufView = new Uint16Array(buf);
+	for (let i = 0, strLen = str.length; i < strLen; i++) {
+		bufView[i] = str.charCodeAt(i);
+	}
+	return buf;
+}
+
