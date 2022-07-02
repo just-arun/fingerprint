@@ -1,4 +1,9 @@
 
+/**
+ * register user biometric credentials using publickey and challenge from application server
+ * @param options options contains public key and challenge for getting biometric credential
+ * @returns 
+ */
 export const Register = async (options: CredentialCreationOptions) => {
 	try {
 		if (!!window) {

@@ -1,3 +1,6 @@
-export const Greeter = (name: string) => `Hello ${name}`; 
+import { Register } from "./register";
 
+export default {
+	Register,
+}
 
